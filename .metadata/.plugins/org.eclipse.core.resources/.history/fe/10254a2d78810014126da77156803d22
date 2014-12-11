@@ -1,0 +1,13 @@
+package com.example.tests;
+
+public class SelectData {
+	public String day;
+	public String month;
+	public String group;
+
+	public SelectData(String day, String month, String group) {
+		this.day = day;
+		this.month = month;
+		this.group = group;
+	}
+}
