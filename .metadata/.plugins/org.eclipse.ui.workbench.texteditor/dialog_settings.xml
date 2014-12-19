@@ -13,8 +13,13 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="import org.testng.annotations.AfterClass;" key="selection"/>
+		<item value="ope" key="selection"/>
 		<list key="findhistory">
+			<item value="ope"/>
+			<item value="isElementPresent"/>
+			<item value="private static WebDriver"/>
+			<item value="private static WebDriver driver"/>
+			<item value="private static WebDriver driver;"/>
 			<item value="import org.testng.annotations.AfterClass;"/>
 			<item value="import org.openqa.selenium.firefox."/>
 			<item value="import org.openqa.selenium.*;"/>

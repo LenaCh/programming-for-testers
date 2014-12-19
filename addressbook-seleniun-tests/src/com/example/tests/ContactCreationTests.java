@@ -6,8 +6,8 @@ public class ContactCreationTests extends TestBase {
    
   @Test
   public void testEmptyGroupCreation() throws Exception {
-    openMainPage();
-    InitNewContactCreation();
+    app.getNavigatioHelper().openMainPage();
+    app.getContactHelper().InitNewContactCreation();
     ContactData contact = new ContactData();
     contact.firstName="Petrov";
     contact.lastName="Ivan";
@@ -19,21 +19,21 @@ public class ContactCreationTests extends TestBase {
     contact.year="1999";
     contact.address="Saint-Petersburg";
     contact.home="8";
-    fillContactCreationForm(contact);
+    app.getContactHelper().fillContactCreationForm(contact);
     SelectContactData select = new SelectContactData();
     select.day= "28";
     select.month= "September";
     select.group= "footer 1";
-	selectContactDetailsFromContactCreationForm(select);
-    reternToMainPage();
+	app.getContactHelper().selectContactDetailsFromContactCreationForm(select);
+    app.getContactHelper().reternToMainPage();
   }
   
   @Test
   public void testNonEmptyGroupCreation() throws Exception {
-    openMainPage();
-    InitNewContactCreation();
-    fillContactCreationForm(new ContactData("", "", "", "", "", "", "", "", "", ""));
-      reternToMainPage();
+    app.getNavigatioHelper().openMainPage();
+    app.getContactHelper().InitNewContactCreation();
+    app.getContactHelper().fillContactCreationForm(new ContactData("", "", "", "", "", "", "", "", "", ""));
+      app.getContactHelper().reternToMainPage();
   }
 }
  
