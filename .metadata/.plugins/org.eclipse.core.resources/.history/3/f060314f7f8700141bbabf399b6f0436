@@ -1,0 +1,21 @@
+package com.example.tests;
+
+import org.testng.annotations.Test;
+
+import com.sun.jna.platform.win32.Netapi32Util.Group;
+
+
+public class GroupModificationTests extends TestBase {
+
+	@Test
+	public void modificationSomeGroup() {
+		 app.getNavigatioHelper().openMainPage();
+		 app.getNavigatioHelper().openGroupsPage();	
+		 app.getGroupHelper().initGroupModifacaton(1);
+		 GroupData groupname = new GroupData();
+		 groupname.name = "new name";
+		 app.getGroupHelper().fillGroupForm(groupname);
+		 app.getGroupHelper().submitGroupModifacaton();
+		 app.getGroupHelper().returnToGroupsPage();
+	}
+}

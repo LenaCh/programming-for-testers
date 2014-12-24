@@ -11,7 +11,7 @@ public class GroupCreationTests extends TestBase {
     GroupData group = new GroupData();
     group.name = "group name 1";
 	group.header = "header 1";
-	group.name = "footer 1";
+	group.footer = "footer 1";
 	app.getGroupHelper().fillGroupForm(group);
     app.getGroupHelper().submitGroupCriation();
     app.getGroupHelper().returnToGroupsPage();

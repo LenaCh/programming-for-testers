@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 public class ContactCreationTests extends TestBase {
    
   @Test
-  public void testEmptyGroupCreation() throws Exception {
+  public void testEmptyContactCreation() throws Exception {
     app.getNavigatioHelper().openMainPage();
     app.getContactHelper().InitNewContactCreation();
     ContactData contact = new ContactData();
@@ -25,15 +25,17 @@ public class ContactCreationTests extends TestBase {
     select.month= "September";
     select.group= "footer 1";
 	app.getContactHelper().selectContactDetailsFromContactCreationForm(select);
+	app.getGroupHelper().submitGroupCriation();
     app.getContactHelper().reternToMainPage();
   }
   
   @Test
-  public void testNonEmptyGroupCreation() throws Exception {
+  public void testNonEmptyContactCreation() throws Exception {
     app.getNavigatioHelper().openMainPage();
     app.getContactHelper().InitNewContactCreation();
     app.getContactHelper().fillContactCreationForm(new ContactData("", "", "", "", "", "", "", "", "", ""));
-      app.getContactHelper().reternToMainPage();
+    app.getGroupHelper().submitGroupCriation();
+    app.getContactHelper().reternToMainPage();
   }
 }
  

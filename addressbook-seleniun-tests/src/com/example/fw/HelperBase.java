@@ -50,13 +50,18 @@ public String closeAlertAndGetItsText() {
     }
   }
 public void type(By locator, String text) {
+	if (text != null){
 	driver.findElement(locator).clear();
 	driver.findElement(locator).sendKeys(text);
+	}
 }
 public void click(By locator) {
 	driver.findElement(locator).click();
 }
 public void selectBytext(By locator, String text) {
 	new Select(driver.findElement(locator)).selectByVisibleText(text);
+}
+public void selectGroupByIndex(int index) {
+	click(By.xpath("//input[@name='selected[]']["+index+"]"));
 }
 }
