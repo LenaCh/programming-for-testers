@@ -10,16 +10,16 @@ public class ApplicationManager {
 	 public  WebDriver driver;
 	 public  String baseUrl;
 	
-	 private NavigatioHelper NavigationHelper;
-	 private GroupHelper GroupHelper;
-	 private ContactHelper ContactHelper;
+	 private NavigatioHelper navigatioHelper;
+	 private GroupHelper groupHelper;
+	 private ContactHelper contactHelper;
 	 
 	public ApplicationManager(){
 
 		 driver = new FirefoxDriver();
 		 baseUrl = "http://localhost/";
 		 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-						
+		 navigatioHelper = new NavigatioHelper(this);				
 	}
 
 	public void stop() {
@@ -27,25 +27,31 @@ public class ApplicationManager {
 	  	
 	}
 	
-	public NavigatioHelper getNavigatioHelper(){
-	if ( NavigationHelper == null){
-		NavigationHelper = new NavigatioHelper(this);
-	}
-	return NavigationHelper;
 	
-  }
-	public GroupHelper getGroupHelper(){
-		if ( GroupHelper == null){
-			GroupHelper = new GroupHelper(this);
+	
+	public NavigatioHelper getNavigatioHelper(){
+		if (navigatioHelper == null) {
+			navigatioHelper = new NavigatioHelper(this);
 		}
-		return GroupHelper;
-		
+		return navigatioHelper;
 	  }
-	public ContactHelper getContactHelper(){
-		if ( ContactHelper == null){
-			ContactHelper = new ContactHelper(this);
+	
+	public GroupHelper getGroupHelper(){
+		if (groupHelper == null) {
+			groupHelper = new GroupHelper(this);
 		}
-		return ContactHelper;
+		return groupHelper; 
+		
+	}
+	
+	
+	
+	public ContactHelper getContactHelper(){
+		if ( contactHelper == null){
+			contactHelper = new ContactHelper(this);
+		}
+		return contactHelper;
 		
 	  }
 }
+
