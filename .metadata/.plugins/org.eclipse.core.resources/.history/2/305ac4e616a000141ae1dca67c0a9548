@@ -1,0 +1,11 @@
+package com.example.fw;
+
+import com.example.tests.ContactData;
+
+public class FillContactCreationFormParameter {
+	public ContactData contact;
+
+	public FillContactCreationFormParameter(ContactData contact) {
+		this.contact = contact;
+	}
+}

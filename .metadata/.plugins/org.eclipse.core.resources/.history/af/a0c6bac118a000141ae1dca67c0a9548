@@ -1,0 +1,48 @@
+package com.example.tests;
+
+import java.util.Collections;
+import java.util.List;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class ContactCreationTests extends TestBase {
+  
+ @Test
+ public void testEmptyContactCreation() throws Exception {
+   app.getNavigatioHelper().openMainPage();
+   
+   //save old state
+   List<ContactData> oldList = app.getContactHelper().getContacts();
+   
+   //actions
+   app.getContactHelper().InitNewContactCreation();
+   ContactData contact = new ContactData();
+   contact.firstName="Petrov";
+  // contact.lastName="Ivan";
+   contact.homePhone="8-812-555-55-55";
+   contact.mobilePhome="+79219999090";
+   contact.workPhone="8-812-666-66-66";
+   contact.mail="petrov@gm.ru";
+   contact.mail2="petrov2@gm.ru";
+   contact.year="1999";
+   contact.address="Saint-Petersburg";
+   contact.home="8";
+   app.getContactHelper().fillContactCreationForm(contact);
+   SelectContactData select = new SelectContactData();
+   select.day= "28";
+   select.month= "September";
+   select.group= "footer 1";
+   app.getContactHelper().selectContactDetailsFromContactCreationForm(select);
+   app.getGroupHelper().submitGroupCriation();
+   app.getContactHelper().reternToMainPage();
+
+   //save new state
+   List<ContactData> newList = app.getContactHelper().getContacts();
+   // compare state
+   
+  /* oldList.add(contact);
+   Collections.sort(oldList);
+   Assert.assertEquals(newList, oldList);*/
+ }
+}

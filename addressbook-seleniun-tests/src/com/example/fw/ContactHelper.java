@@ -1,6 +1,11 @@
 package com.example.fw;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.bcel.generic.NEWARRAY;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import com.example.tests.ContactData;
 import com.example.tests.SelectContactData;
@@ -17,7 +22,7 @@ public class ContactHelper extends HelperBase{
 
 	public void fillContactCreationForm(ContactData contact) {
 		type(By.name("firstname"),contact.firstName);
-		type(By.name("address"),contact.lastName);
+	//	type(By.name("lastName"),contact.lastName);
 		type(By.name("home"),contact.homePhone);
 		type(By.name("mobile"),contact.mobilePhome);
 		type(By.name("work"),contact.workPhone);
@@ -40,8 +45,8 @@ public class ContactHelper extends HelperBase{
 	}
 
 	public void initContactModification(int index) {
-		selectGroupByIndex(index);
-		click(By.cssSelector("img[alt=\"Edit\"]"));
+	
+		click(By.xpath("(//img[@alt='Edit'])[" + (index+1) + "]"));
 		
 	}
 
@@ -53,5 +58,18 @@ public class ContactHelper extends HelperBase{
 		click(By.xpath("(//input[@name='update'])"));
 		
 	}
+ 
 
+public List<ContactData> getContacts() {
+	List<ContactData> contacts = new ArrayList<ContactData>();
+	List<WebElement> line = driver.findElements(By.xpath("//table/tbody/tr"));
+	for (WebElement lines : line) {
+		ContactData contact = new ContactData();
+		   contact.firstName= lines.findElement(By.xpath("//td[3]")).getText();
+		   contact.lastName= lines.findElement(By.xpath("//td[2]")).getText();
+		   contacts.add(contact);
+	} 
+		
+	return contacts;
+}
 }

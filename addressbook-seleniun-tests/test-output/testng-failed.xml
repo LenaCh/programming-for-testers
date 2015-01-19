@@ -3,37 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.example.tests.ContactRemovalTests">
+      <class name="com.example.tests.ContactModificationTests">
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-        </methods>
-      </class> <!-- com.example.tests.ContactRemovalTests -->
-      <class name="com.example.tests.ContactCreationTests">
-        <methods>
-          <include name="testEmptyContactCreation"/>
-          <include name="testNonEmptyContactCreation"/>
-        </methods>
-      </class> <!-- com.example.tests.ContactCreationTests -->
-      <class name="com.example.tests.GroupCreationTests">
-        <methods>
-          <include name="testEmptyGroupCreation1"/>
-          <include name="testNonEmptyGroupCreation"/>
-        </methods>
-      </class> <!-- com.example.tests.GroupCreationTests -->
-      <class name="com.example.tests.GroupModificationTests">
-        <methods>
-          <include name="modificationSomeGroup"/>
-        </methods>
-      </class> <!-- com.example.tests.GroupModificationTests -->
-      <class name="com.example.tests.GroupRemovalTests">
-        <methods>
-          <include name="deleteSomeGroup"/>
-        </methods>
-      </class> <!-- com.example.tests.GroupRemovalTests -->
-      <class name="com.example.tests.ContactModificationTests">
-        <methods>
-          <include name="modificationSomeContact"/>
+          <include name="modificationSomeContact" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.example.tests.ContactModificationTests -->
     </classes>

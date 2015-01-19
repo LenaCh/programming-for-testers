@@ -15,6 +15,7 @@
 		<item value="false" key="wholeword"/>
 		<item value="" key="selection"/>
 		<list key="findhistory">
+			<item value="generated hash"/>
 			<item value="del"/>
 			<item value="ope"/>
 			<item value="isElementPresent"/>
@@ -22,9 +23,12 @@
 			<item value="private static WebDriver driver"/>
 			<item value="private static WebDriver driver;"/>
 			<item value="import org.testng.annotations.AfterClass;"/>
-			<item value="import org.openqa.selenium.firefox."/>
 		</list>
 		<list key="replacehistory">
 		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="247" key="DIALOG_Y_ORIGIN"/>
+		<item value="452" key="DIALOG_X_ORIGIN"/>
 	</section>
 </section>

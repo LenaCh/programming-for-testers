@@ -12,6 +12,7 @@ public abstract class HelperBase {
   protected ApplicationManager manager;
   protected WebDriver driver;
   public  boolean acceptNextAlert = true;
+  
 public HelperBase(ApplicationManager manager) {
 	this.manager = manager;
 	this.driver = manager.driver;
@@ -62,6 +63,6 @@ public void selectBytext(By locator, String text) {
 	new Select(driver.findElement(locator)).selectByVisibleText(text);
 }
 public void selectGroupByIndex(int index) {
-	click(By.xpath("//input[@name='selected[]']["+index+"]"));
+	click(By.xpath("//input[@name='selected[]']["+(index+1)+"]"));
 }
 }
