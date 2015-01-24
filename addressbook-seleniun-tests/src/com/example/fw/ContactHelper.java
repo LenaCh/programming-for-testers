@@ -22,7 +22,7 @@ public class ContactHelper extends HelperBase{
 
 	public void fillContactCreationForm(ContactData contact) {
 		type(By.name("firstname"),contact.firstName);
-	//	type(By.name("lastName"),contact.lastName);
+		type(By.name("lastName"),contact.lastName);
 		type(By.name("home"),contact.homePhone);
 		type(By.name("mobile"),contact.mobilePhome);
 		type(By.name("work"),contact.workPhone);
@@ -62,11 +62,12 @@ public class ContactHelper extends HelperBase{
 
 public List<ContactData> getContacts() {
 	List<ContactData> contacts = new ArrayList<ContactData>();
-	List<WebElement> line = driver.findElements(By.xpath("//table/tbody/tr"));
+	List<WebElement> line = driver.findElements(By.name("entry"));
 	for (WebElement lines : line) {
 		ContactData contact = new ContactData();
-		   contact.firstName= lines.findElement(By.xpath("//td[3]")).getText();
-		   contact.lastName= lines.findElement(By.xpath("//td[2]")).getText();
+		List<WebElement> cells = lines.findElements(By.tagName("td"));
+		contact.firstName = cells.get(2).getText();
+		contact.lastName = cells.get(1).getText();
 		   contacts.add(contact);
 	} 
 		

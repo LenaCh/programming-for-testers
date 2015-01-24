@@ -13,16 +13,16 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="" key="selection"/>
+		<item value="selectGroup" key="selection"/>
 		<list key="findhistory">
+			<item value="selectGroup"/>
+			<item value="select"/>
+			<item value="Collections"/>
 			<item value="generated hash"/>
 			<item value="del"/>
 			<item value="ope"/>
 			<item value="isElementPresent"/>
 			<item value="private static WebDriver"/>
-			<item value="private static WebDriver driver"/>
-			<item value="private static WebDriver driver;"/>
-			<item value="import org.testng.annotations.AfterClass;"/>
 		</list>
 		<list key="replacehistory">
 		</list>

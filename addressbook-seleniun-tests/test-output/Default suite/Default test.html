@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jan 20 01:11:01 MSK 2015</td>
+<td>Started on:</td><td>Sat Jan 24 16:31:31 MSK 2015</td>
 </tr>
-<tr><td>Total time:</td><td>4 seconds (4011 ms)</td>
+<tr><td>Total time:</td><td>1 seconds (1731 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,16 +75,14 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.example.tests.ContactModificationTests.modificationSomeContact()'><b>modificationSomeContact</b><br>Test class: com.example.tests.ContactModificationTests<br>Parameters: ContactData [firstName=, lastname=null]</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.example.tests.ContactData.compareTo(ContactData.java:67)
-	at com.example.tests.ContactData.compareTo(ContactData.java:1)
-	at java.util.ComparableTimSort.countRunAndMakeAscending(Unknown Source)
-	at java.util.ComparableTimSort.sort(Unknown Source)
-	at java.util.ComparableTimSort.sort(Unknown Source)
-	at java.util.Arrays.sort(Unknown Source)
-	at java.util.Collections.sort(Unknown Source)
-	at com.example.tests.ContactModificationTests.modificationSomeContact(ContactModificationTests.java:37)
+<td title='com.example.tests.ContactRemovalTests.deleteSomeContact()'><b>deleteSomeContact</b><br>Test class: com.example.tests.ContactRemovalTests</td>
+<td><div><pre>java.lang.AssertionError: Lists differ at element [6]: ContactData [firstName=test1191863744, lastname=] != ContactData [firstName=test126227275, lastname=] expected [ContactData [firstName=test1191863744, lastname=]] but found [ContactData [firstName=test126227275, lastname=]]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:549)
+	at org.testng.Assert.assertEquals(Assert.java:514)
+	at com.example.tests.ContactRemovalTests.deleteSomeContact(ContactRemovalTests.java:33)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -109,16 +107,14 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1487074332", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1487074332'><pre>java.lang.NullPointerException
-	at com.example.tests.ContactData.compareTo(ContactData.java:67)
-	at com.example.tests.ContactData.compareTo(ContactData.java:1)
-	at java.util.ComparableTimSort.countRunAndMakeAscending(Unknown Source)
-	at java.util.ComparableTimSort.sort(Unknown Source)
-	at java.util.ComparableTimSort.sort(Unknown Source)
-	at java.util.Arrays.sort(Unknown Source)
-	at java.util.Collections.sort(Unknown Source)
-	at com.example.tests.ContactModificationTests.modificationSomeContact(ContactModificationTests.java:37)
+</pre></div><a href='#' onClick='toggleBox("stack-trace429907687", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace429907687'><pre>java.lang.AssertionError: Lists differ at element [6]: ContactData [firstName=test1191863744, lastname=] != ContactData [firstName=test126227275, lastname=] expected [ContactData [firstName=test1191863744, lastname=]] but found [ContactData [firstName=test126227275, lastname=]]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:549)
+	at org.testng.Assert.assertEquals(Assert.java:514)
+	at com.example.tests.ContactRemovalTests.deleteSomeContact(ContactRemovalTests.java:33)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -144,8 +140,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 </pre></div></td>
-<td>3</td>
-<td>com.example.tests.ContactModificationTests@283a0f10</td></tr>
+<td>1</td>
+<td>com.example.tests.ContactRemovalTests@284a6c0</td></tr>
 </table><p>
 </body>
 </html>

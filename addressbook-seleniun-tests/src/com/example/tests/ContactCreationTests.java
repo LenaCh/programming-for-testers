@@ -21,7 +21,6 @@ public class ContactCreationTests extends TestBase {
    
    //actions
    app.getContactHelper().InitNewContactCreation();
-  
    app.getContactHelper().fillContactCreationForm(contact);
    SelectContactData select = new SelectContactData();
    select.day= "28";
